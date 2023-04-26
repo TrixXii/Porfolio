@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="../js/contact.js" defer></script>
+    <script src="../js/script.js" defer></script>
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">My Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Sobre Mi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./niValor.html">Mi valor en la empresa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cv">CV</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <section id="contact" class="fade-in animate__animated animate__slideInUp">
+            <h2>Contact Me</h2>
+            <div class="d-flex">
+                <div class="w-50">
+                    <h3>Links</h3>
+                    <ul class="contact-links">
+                        <li><a href="https://www.linkedin.com/in/tunombre/" target="_blank"><i
+                                    class="fa fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://twitter.com/tunombre" target="_blank"><i class="fa fa-twitter"></i>
+                                Twitter</a></li>
+                        <li><a href="https://www.instagram.com/tunombre/" target="_blank"><i
+                                    class="fa fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                    <h3>Phone</h3>
+                    <p class="contact-info">Tu número de teléfono aquí</p>
+                    <h3>Hours</h3>
+                    <p class="contact-info">Lunes a Viernes: 9am - 5pm<br>
+                        Sábados y Domingos: Cerrado</p>
+                </div>
+                <form class="form-group w-50 animate__animated animate__pulse ">
+                    <label for="name"><i class="fa fa-user col"> </i>Name:</label>
+                    <input type="text" id="name" name="name" />
+
+                    <label for="email"><i class="fa fa-envelope col"> </i>Email:</label>
+                    <input type="email" id="email" name="email" />
+
+                    <label for="message"><i class="fa fa-comment"> </i>Message:</label>
+                    <textarea id="message" name="message"></textarea>
+
+                    <input type="submit" value="Send" />
+                </form>
+            </div>
+        </section>
+
+        <section id="cv">
+            <h1>CV</h1>
+            <p>Un enlace para descargar mi CV en formato PDF.</p>
+            <a href="cv.pdf" download>Descargar CV</a>
+        </section>
+    </main>
+
+
+</body>
+
+</html>
