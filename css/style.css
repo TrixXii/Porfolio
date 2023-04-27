@@ -181,7 +181,7 @@ section {
 
 #mi-valor {
     padding: 50px 0;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
 }
 
 #mi-valor h2 {
@@ -370,11 +370,11 @@ input[type="submit"]:hover {
 
 .contIni img {
     border-radius: 10%;
-    width: 190px;
+    width: 200px;
+    height: 200px;
     border: 5px solid rgba(0 0 0 /12%);
     object-fit: cover;
     object-position: center;
-    height: 220px;
     max-width: 100%;
 }
 
@@ -541,4 +541,123 @@ footer {
     height: 40%;
     border-radius: 0px 0px 50% 50%;
     background: linear-gradient(100deg, rgba(131, 58, 180, 1) 10%, rgba(202, 20, 132, 1) 50%);
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.blobs,
+.blobs2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: url(#goo);
+    margin: 0px 90px;
+}
+
+.circle-styles {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    transform: translate(0, -48px);
+    background: #af4c99;
+    clip-path: circle(42px at center);
+}
+
+.first,
+.first2 {
+    transition: transform 0.5s 100ms ease-out;
+    background: hsl(307, 70%, 58%);
+}
+
+.second,
+.second2 {
+    transition: transform 0.5s 300ms ease-out;
+    background: hsl(277, 70%, 58%);
+}
+
+.last,
+.last2 {
+    transition: transform 0.5s 500ms ease-out;
+    background: hsl(247, 70%, 58%);
+}
+
+.first.show,
+.first2.show2 {
+    transform: translate(-100px, -120px);
+}
+
+.second.show,
+.second2.show2 {
+    transform: translate(0px, -150px);
+}
+
+.last.show,
+.last2.show2 {
+    transform: translate(100px, -120px);
+}
+
+.bg.show {
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.cross,
+.cross2 {
+    transform-origin: center center;
+    transition: all 0.5s ease-in-out;
+}
+
+.cross.show,
+.cross2.show2 {
+    transform: rotate(45deg);
+}
+
+.main-circle,
+.main-circle2 {
+    z-index: 2;
+}
+
+.main-icons {
+    fill: rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-styles:nth-child(1) span {
+    width: 35px;
+    height: 5px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 15px;
+}
+
+.circle-styles:nth-child(1) span:nth-child(2) {
+    transform: rotate(90deg);
+}
+
+.circle-styles:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+svg {
+    height: 0;
+    width: 0;
+}
+
+#habilidades {
+    position: relative;
+    height: 400px;
 }
