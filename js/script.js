@@ -71,7 +71,7 @@ const circles = document.querySelectorAll(".circles");
 const cross = document.querySelector(".cross");
 const crossbg = document.querySelector(".bg");
 
-button.addEventListener("click", function() {
+button.addEventListener("mouseenter", function() {
     cross.classList.toggle("show");
     crossbg.classList.toggle("show");
     circles.forEach(element => {
@@ -80,14 +80,31 @@ button.addEventListener("click", function() {
 
 });
 
+button.addEventListener("mouseleave", function() {
+    cross.classList.toggle("show");
+    crossbg.classList.toggle("show");
+    circles.forEach(element => {
+        element.classList.toggle("show");
+    });
+});
+
+
 const button2 = document.querySelector(".main-circle2");
 const cross2 = document.querySelector(".cross2");
 
-button2.addEventListener("click", function() {
+button2.addEventListener("mouseenter", function() {
     cross2.classList.toggle("show2");
     crossbg.classList.toggle("show2");
     circles.forEach(element => {
         element.classList.toggle("show2");
     });
 
+});
+
+button2.addEventListener("mouseleave", function() {
+    cross2.classList.toggle("show2");
+    crossbg.classList.toggle("show2");
+    circles.forEach(element => {
+        element.classList.toggle("show2");
+    });
 });
