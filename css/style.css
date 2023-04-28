@@ -561,6 +561,7 @@ footer {
 
 .circle-styles {
     position: absolute;
+    cursor: pointer;
     width: 90px;
     height: 90px;
     transform: translate(0, -48px);
@@ -661,37 +662,37 @@ svg {
     position: relative;
     height: 400px;
 }
-  
+
 .projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-  
-  .project {
+}
+
+.project {
     width: 30%;
     margin-bottom: 30px;
     text-align: center;
-  }
-  
-  .project img {
+}
+
+.project img {
     width: 100%;
     height: auto;
     border-radius: 5px;
-  }
-  
-  .project h3 {
+}
+
+.project h3 {
     margin-top: 10px;
     font-size: 24px;
     font-weight: bold;
-  }
-  
-  .project p {
+}
+
+.project p {
     margin-top: 10px;
     font-size: 16px;
-  }
-  
-  .details-btn {
+}
+
+.details-btn {
     margin-top: 10px;
     padding: 10px 20px;
     border: none;
@@ -700,9 +701,9 @@ svg {
     color: #fff;
     font-size: 16px;
     cursor: pointer;
-  }
-  
-  .modal {
+}
+
+.modal {
     display: none;
     position: fixed;
     z-index: 9999;
@@ -711,9 +712,9 @@ svg {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -725,9 +726,9 @@ svg {
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
-  }
-  
-  .close-btn {
+}
+
+.close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -737,9 +738,8 @@ svg {
     border: none;
     background-color: transparent;
     cursor: pointer;
-  }
-  
-  .close-btn:hover {
+}
+
+.close-btn:hover {
     color: #333;
-  }
-  
+}

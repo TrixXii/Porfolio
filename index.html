@@ -14,7 +14,7 @@
     <script src="https://apis.google.com/js/api.js"></script>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    
+
     <script src="./js/contact.js" defer></script>
     <script src="./js/script.js" defer></script>
 
@@ -306,7 +306,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
                 <defs>
                     <filter id="goo">
-                        <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
                         <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
                         <feBlend in="SourceGraphic" in2="goo" />
                     </filter>
@@ -316,43 +316,43 @@
         <section id="mis-proyectos" class="fade-in animate__animated animate__slideInUp">
             <div class="  ">
                 <div class="projects gap-3 js-scroll fade-in-bottom">
-                  <div class="project">
-                    <img src="" alt="Proyecto 1">
-                    <h3>Proyecto 1</h3>
-                    <p>Descripción breve del proyecto 1.</p>
-                    <button class="details-btn details-btn-1">Ver detalles</button>
-                  </div>
-                  <div class="project">
-                    <img src="" alt="Proyecto 2">
-                    <h3>Proyecto 2</h3>
-                    <p>Descripción breve del proyecto 2.</p>
-                    <button class="details-btn details-btn-2">Ver detalles</button>
-                  </div>
-                  <div class="project">
-                    <img src="" alt="Proyecto 3">
-                    <h3>Proyecto 3</h3>
-                    <p>Descripción breve del proyecto 3.</p>
-                    <button class="details-btn details-btn-3">Ver detalles</button>
-                  </div>
-                  <div class="project">
-                    <img src="" alt="Proyecto 4">
-                    <h3>Proyecto 4</h3>
-                    <p>Descripción breve del proyecto 3.</p>
-                    <button class="details-btn details-btn-3">Ver detalles</button>
-                  </div>
+                    <div class="project">
+                        <img src="" alt="Proyecto 1">
+                        <h3>Proyecto 1</h3>
+                        <p>Descripción breve del proyecto 1.</p>
+                        <button class="details-btn details-btn-1">Ver detalles</button>
+                    </div>
+                    <div class="project">
+                        <img src="" alt="Proyecto 2">
+                        <h3>Proyecto 2</h3>
+                        <p>Descripción breve del proyecto 2.</p>
+                        <button class="details-btn details-btn-2">Ver detalles</button>
+                    </div>
+                    <div class="project">
+                        <img src="" alt="Proyecto 3">
+                        <h3>Proyecto 3</h3>
+                        <p>Descripción breve del proyecto 3.</p>
+                        <button class="details-btn details-btn-3">Ver detalles</button>
+                    </div>
+                    <div class="project">
+                        <img src="" alt="Proyecto 4">
+                        <h3>Proyecto 4</h3>
+                        <p>Descripción breve del proyecto 3.</p>
+                        <button class="details-btn details-btn-3">Ver detalles</button>
+                    </div>
                 </div>
             </div>
-            
+
         </section>
-  <div class="modal" id="project-modal">
-                  <div class="modal-content">
-                    <button class="close-btn">&times;</button>
-                    <h2 id="project-modal-title"></h2>
-                    <p id="project-modal-description"></p>
-                    <!-- Agregar aquí cualquier otra información detallada del proyecto -->
-                  </div>
-                </div>
-          <section id="contact" class="fade-in animate__animated animate__slideInUp">
+        <div class="modal" id="project-modal">
+            <div class="modal-content">
+                <button class="close-btn">&times;</button>
+                <h2 id="project-modal-title"></h2>
+                <p id="project-modal-description"></p>
+                <!-- Agregar aquí cualquier otra información detallada del proyecto -->
+            </div>
+        </div>
+        <section id="contact" class="fade-in animate__animated animate__slideInUp">
             <h2>Contact Me</h2>
             <div class="d-flex">
                 <div class="w-50">
@@ -373,16 +373,16 @@
                 <form class="form-group w-50 animate__animated animate__pulse ">
                     <label for="name"><i class="fa fa-user col"> </i>Name:</label>
                     <input type="text" id="name" name="name" />
-    
+
                     <label for="email"><i class="fa fa-envelope col"> </i>Email:</label>
                     <input type="email" id="email" name="email" />
-    
+
                     <label for="message"><i class="fa fa-comment"> </i>Message:</label>
                     <textarea id="message" name="message"></textarea>
-    
+
                     <input type="submit" value="Send" />
                 </form>
-    
+
             </div>
         </section>
     </main>
