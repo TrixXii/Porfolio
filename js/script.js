@@ -58,7 +58,7 @@ window.addEventListener("scroll", () => {
 
 const nav = document.querySelector('nav');
 
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', function() {
     if (window.scrollY > 0) {
         nav.classList.add('scroll');
     } else {
@@ -71,7 +71,7 @@ const circles = document.querySelectorAll(".circles");
 const cross = document.querySelector(".cross");
 const crossbg = document.querySelector(".bg");
 
-button.addEventListener("mouseenter", function () {
+button.addEventListener("mouseenter", function() {
     cross.classList.toggle("show");
     crossbg.classList.toggle("show");
     circles.forEach(element => {
@@ -80,7 +80,7 @@ button.addEventListener("mouseenter", function () {
 
 });
 
-button.addEventListener("mouseleave", function () {
+button.addEventListener("mouseleave", function() {
     cross.classList.toggle("show");
     crossbg.classList.toggle("show");
     circles.forEach(element => {
@@ -92,7 +92,7 @@ button.addEventListener("mouseleave", function () {
 const button2 = document.querySelector(".main-circle2");
 const cross2 = document.querySelector(".cross2");
 
-button2.addEventListener("mouseenter", function () {
+button2.addEventListener("mouseenter", function() {
     cross2.classList.toggle("show2");
     crossbg.classList.toggle("show2");
     circles.forEach(element => {
@@ -101,7 +101,7 @@ button2.addEventListener("mouseenter", function () {
 
 });
 
-button2.addEventListener("mouseleave", function () {
+button2.addEventListener("mouseleave", function() {
     cross2.classList.toggle("show2");
     crossbg.classList.toggle("show2");
     circles.forEach(element => {
@@ -116,33 +116,34 @@ const detailsBtns = document.querySelectorAll('.details-btn');
 const modal = document.getElementById('project-modal');
 const modalTitle = document.getElementById('project-modal-title');
 const modalDescription = document.getElementById('project-modal-description');
+const modalImage = document.getElementById('imgProyect');
+
 
 // Agregar un manejador de eventos de clic para cada botón "Ver detalles"
 detailsBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    // Obtener el proyecto correspondiente
-    const projectContainer = btn.parentElement;
-    const projectTitle = projectContainer.querySelector('h3').textContent;
-    const projectDescription = projectContainer.querySelector('p').textContent;
+    btn.addEventListener('click', () => {
+        // Obtener el proyecto correspondiente
+        const projectContainer = btn.parentElement;
+        const projectTitle = projectContainer.querySelector('h3').textContent;
+        const projectDescription = projectContainer.querySelector('p').textContent;
 
-    // Actualizar la modal con la información del proyecto
-    modalTitle.textContent = projectTitle;
-    modalDescription.textContent = projectDescription;
-
-    // Mostrar la modal
-    modal.style.display = 'block';
-  });
+        // Actualizar la modal con la información del proyecto
+        modalTitle.textContent = projectTitle;
+        modalDescription.textContent = projectDescription;
+        // Mostrar la modal
+        modal.style.display = 'block';
+    });
 });
 
 // Agregar un manejador de eventos de clic para el botón de cerrar la modal
 const closeBtn = modal.querySelector('.close-btn');
 closeBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
+    modal.style.display = 'none';
 });
 
 // Cerrar la modal si el usuario hace clic fuera de ella
 modal.addEventListener('click', (event) => {
     if (event.target === modal) {
-    modal.style.display = 'none';
+        modal.style.display = 'none';
     }
-    });
+});
