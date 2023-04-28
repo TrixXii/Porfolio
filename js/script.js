@@ -116,20 +116,24 @@ const detailsBtns = document.querySelectorAll('.details-btn');
 const modal = document.getElementById('project-modal');
 const modalTitle = document.getElementById('project-modal-title');
 const modalDescription = document.getElementById('project-modal-description');
-const modalImage = document.getElementById('imgProyect');
 
 
 // Agregar un manejador de eventos de clic para cada botón "Ver detalles"
 detailsBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
         // Obtener el proyecto correspondiente
+       // Obtener el proyecto correspondiente
         const projectContainer = btn.parentElement;
         const projectTitle = projectContainer.querySelector('h3').textContent;
         const projectDescription = projectContainer.querySelector('p').textContent;
+        const projectImgSrc = projectContainer.querySelector('img').getAttribute('src');
+
 
         // Actualizar la modal con la información del proyecto
-        modalTitle.textContent = projectTitle;
-        modalDescription.textContent = projectDescription;
+    modalTitle.textContent = projectTitle;
+    modalDescription.textContent = projectDescription;
+    document.querySelector('#project-modal-image').setAttribute('src', projectImgSrc);
+
         // Mostrar la modal
         modal.style.display = 'block';
     });
