@@ -743,3 +743,59 @@ svg {
 .close-btn:hover {
     color: #333;
 }
+
+#project-modal-img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.modal-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#project-modal-prev,
+#project-modal-next {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: color 0.2s ease-in-out;
+}
+
+#project-modal-prev:hover,
+#project-modal-next:hover {
+    color: #555;
+}
+
+#project-modal-prev:disabled,
+#project-modal-next:disabled {
+    color: #ccc;
+    cursor: default;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    #project-modal-img {
+        margin: 10px 0;
+    }
+    
+    .modal-nav {
+        margin-top: 10px;
+    }
+    
+    #project-modal-prev,
+    #project-modal-next {
+        font-size: 24px;
+        margin: 0 5px;
+    }
+}

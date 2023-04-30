@@ -116,27 +116,60 @@ const detailsBtns = document.querySelectorAll('.details-btn');
 const modal = document.getElementById('project-modal');
 const modalTitle = document.getElementById('project-modal-title');
 const modalDescription = document.getElementById('project-modal-description');
+const modalImg = document.getElementById('project-modal-img');
+const modalPrevBtn = document.getElementById('project-modal-prev');
+const modalNextBtn = document.getElementById('project-modal-next');
 
+let currentProject = 0;
+const projects = [
+  {
+    title: 'Proyecto 1',
+    description: 'Descripción breve del proyecto 1.',
+    imgSrc: './img/2023-03-03 16-32-06.gif'
+  },
+  {
+    title: 'Proyecto 2',
+    description: 'Descripción breve del proyecto 2.',
+    imgSrc: './img/2023-03-03 16-28-50.gif'
+  },
+  {
+    title: 'Proyecto 3',
+    description: 'Descripción breve del proyecto 3.',
+    imgSrc: './img/2023-03-03 16-25-31.gif'
+  },
+  {
+    title: 'Proyecto 4',
+    description: 'Descripción breve del proyecto 4.',
+    imgSrc: './img/2023-03-03 16-39-35.gif'
+  }
+];
+
+function updateProjectInfo() {
+  modalTitle.textContent = projects[currentProject].title;
+  modalDescription.textContent = projects[currentProject].description;
+  modalImg.src = projects[currentProject].imgSrc;
+}
 
 // Agregar un manejador de eventos de clic para cada botón "Ver detalles"
 detailsBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-        // Obtener el proyecto correspondiente
-       // Obtener el proyecto correspondiente
-        const projectContainer = btn.parentElement;
-        const projectTitle = projectContainer.querySelector('h3').textContent;
-        const projectDescription = projectContainer.querySelector('p').textContent;
-        const projectImgSrc = projectContainer.querySelector('img').getAttribute('src');
+  btn.addEventListener('click', () => {
+    // Obtener el proyecto correspondiente
+    const projectContainer = btn.parentElement;
+    currentProject = [...projectContainer.parentElement.children].indexOf(projectContainer);
+    updateProjectInfo();
+    // Mostrar la modal
+    modal.style.display = 'block';
+  });
+});
 
+modalPrevBtn.addEventListener('click', () => {
+  currentProject = (currentProject - 1 + projects.length) % projects.length;
+  updateProjectInfo();
+});
 
-        // Actualizar la modal con la información del proyecto
-    modalTitle.textContent = projectTitle;
-    modalDescription.textContent = projectDescription;
-    document.querySelector('#project-modal-image').setAttribute('src', projectImgSrc);
-
-        // Mostrar la modal
-        modal.style.display = 'block';
-    });
+modalNextBtn.addEventListener('click', () => {
+  currentProject = (currentProject + 1) % projects.length;
+  updateProjectInfo();
 });
 
 // Agregar un manejador de eventos de clic para el botón de cerrar la modal
