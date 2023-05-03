@@ -666,12 +666,14 @@ svg {
 .projects {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .project {
-    margin-bottom: 30px;
+    margin: 20px 10px;
     text-align: center;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px #68686824;
 }
 
 .project img {
@@ -693,7 +695,7 @@ svg {
 }
 
 .details-btn {
-    margin-top: 10px;
+    margin: 10px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -711,7 +713,7 @@ svg {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.381);
 }
 
 .modal-content {
@@ -726,6 +728,12 @@ svg {
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
+    height: 100%;
+    max-height: 600px;
+}
+
+.cont-meProject {
+    overflow: auto;
 }
 
 .close-btn {
@@ -756,8 +764,19 @@ svg {
     margin-top: 20px;
 }
 
+#project-modal-prev {
+    left: 50px;
+    top: 50%;
+}
+
+#project-modal-next {
+    right: 50px;
+    top: 50%;
+}
+
 #project-modal-prev,
 #project-modal-next {
+    position: absolute;
     font-size: 30px;
     font-weight: bold;
     color: #333;
@@ -784,15 +803,12 @@ svg {
         width: 90%;
         padding: 20px;
     }
-    
     #project-modal-img {
         margin: 10px 0;
     }
-    
     .modal-nav {
         margin-top: 10px;
     }
-    
     #project-modal-prev,
     #project-modal-next {
         font-size: 24px;

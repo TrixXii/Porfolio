@@ -88,7 +88,6 @@ button.addEventListener("mouseleave", function() {
     });
 });
 
-
 const button2 = document.querySelector(".main-circle2");
 const cross2 = document.querySelector(".cross2");
 
@@ -110,7 +109,6 @@ button2.addEventListener("mouseleave", function() {
 });
 
 // Obtener todos los botones "Ver detalles"
-const detailsBtns = document.querySelectorAll('.details-btn');
 
 // Obtener la modal y su contenido
 const modal = document.getElementById('project-modal');
@@ -121,66 +119,91 @@ const modalPrevBtn = document.getElementById('project-modal-prev');
 const modalNextBtn = document.getElementById('project-modal-next');
 
 let currentProject = 0;
-const projects = [
-  {
-    title: 'Proyecto 1',
-    description: 'Descripción breve del proyecto 1.',
-    imgSrc: './img/2023-03-03 16-32-06.gif'
-  },
-  {
-    title: 'Proyecto 2',
-    description: 'Descripción breve del proyecto 2.',
-    imgSrc: './img/2023-03-03 16-28-50.gif'
-  },
-  {
-    title: 'Proyecto 3',
-    description: 'Descripción breve del proyecto 3.',
-    imgSrc: './img/2023-03-03 16-25-31.gif'
-  },
-  {
-    title: 'Proyecto 4',
-    description: 'Descripción breve del proyecto 4.',
-    imgSrc: './img/2023-03-03 16-39-35.gif'
-  }
+const projects = [{
+        title: 'Proyecto 1',
+        description: 'Descripción breve del proyecto 1.',
+        imgSrc: './img/2023-03-03 16-32-06.gif'
+    },
+    {
+        title: 'Eventos',
+        description: 'Plantilla de diseño',
+        allDesc: `En este proyecto cree una plantilla para un evento de una empresa llamada Meetmaps
+         en la que me encontraba de practicas, en donde muestro información sobre el evento, en donde se celebrara, 
+         una agenda de las actividades y informacion sobre los ponentes`,
+        imgSrc: './img/2023-03-03 16-28-50.gif'
+    },
+    {
+        title: 'Proyecto 3',
+        description: 'Descripción breve del proyecto 3.',
+        allDesc: 'Plantilla de diseño',
+        imgSrc: './img/2023-03-03 16-25-31.gif'
+    },
+    {
+        title: 'Proyecto 4',
+        description: 'Descripción breve del proyecto 4.',
+        allDesc: 'Plantilla de diseño',
+        imgSrc: './img/2023-03-03 16-39-35.gif'
+    }
 ];
 
-function updateProjectInfo() {
-  modalTitle.textContent = projects[currentProject].title;
-  modalDescription.textContent = projects[currentProject].description;
-  modalImg.src = projects[currentProject].imgSrc;
-}
+function generateProjects() {
+    const allProjects = document.getElementById('allprojects');
+    projects.forEach(project => {
+        allProjects.innerHTML += `
+            <div class="project">
+                <img src="${project.imgSrc}" alt="${project.title}">
+                <h3>${project.title}</h3>
+                <div class=" text-body-secondary">
+                ${project.description}
+                </div>
+                <button class="details-btn">Ver detalles</button>
+            </div>
+        `;
+    });
 
-// Agregar un manejador de eventos de clic para cada botón "Ver detalles"
-detailsBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    // Obtener el proyecto correspondiente
-    const projectContainer = btn.parentElement;
-    currentProject = [...projectContainer.parentElement.children].indexOf(projectContainer);
-    updateProjectInfo();
-    // Mostrar la modal
-    modal.style.display = 'block';
-  });
-});
-
-modalPrevBtn.addEventListener('click', () => {
-  currentProject = (currentProject - 1 + projects.length) % projects.length;
-  updateProjectInfo();
-});
-
-modalNextBtn.addEventListener('click', () => {
-  currentProject = (currentProject + 1) % projects.length;
-  updateProjectInfo();
-});
-
-// Agregar un manejador de eventos de clic para el botón de cerrar la modal
-const closeBtn = modal.querySelector('.close-btn');
-closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
-
-// Cerrar la modal si el usuario hace clic fuera de ella
-modal.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        modal.style.display = 'none';
+    function updateProjectInfo() {
+        modalTitle.textContent = projects[currentProject].title;
+        modalDescription.textContent = projects[currentProject].allDesc;
+        modalImg.src = projects[currentProject].imgSrc;
     }
-});
+
+    // Agregar un manejador de eventos de clic para cada botón "Ver detalles"
+    const detailsBtns = document.querySelectorAll('.details-btn');
+
+    detailsBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            debugger
+            // Obtener el proyecto correspondiente
+            const projectContainer = btn.parentElement;
+            currentProject = [...projectContainer.parentElement.children].indexOf(projectContainer);
+            updateProjectInfo();
+            // Mostrar la modal
+            modal.style.display = 'block';
+        });
+    });
+
+    modalPrevBtn.addEventListener('click', () => {
+        currentProject = (currentProject - 1 + projects.length) % projects.length;
+        updateProjectInfo();
+    });
+
+    modalNextBtn.addEventListener('click', () => {
+        currentProject = (currentProject + 1) % projects.length;
+        updateProjectInfo();
+    });
+
+    // Agregar un manejador de eventos de clic para el botón de cerrar la modal
+    const closeBtn = modal.querySelector('.close-btn');
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Cerrar la modal si el usuario hace clic fuera de ella
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+}
+generateProjects();
