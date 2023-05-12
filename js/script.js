@@ -120,29 +120,33 @@ const modalNextBtn = document.getElementById('project-modal-next');
 
 let currentProject = 0;
 const projects = [{
-        title: 'Proyecto 1',
-        description: 'Descripción breve del proyecto 1.',
+        title: 'Carrusel informativo',
+        description: 'Diseño web.',
+        allDesc: `En este proyecto cree una plantilla para un evento de una empresa llamada Meetmaps
+         en la que me encontraba de practicas, en donde muestro información sobre el evento, en donde se celebrara, 
+         una agenda de las actividades y informacion sobre los ponentes`,
         imgSrc: './img/2023-03-03 16-32-06.gif'
     },
     {
         title: 'Eventos',
         description: 'Plantilla de diseño',
-        allDesc: `En este proyecto cree una plantilla para un evento de una empresa llamada Meetmaps
-         en la que me encontraba de practicas, en donde muestro información sobre el evento, en donde se celebrara, 
-         una agenda de las actividades y informacion sobre los ponentes`,
+        allDesc: `Cree este carrusel para la empresa Meetpas haciendo una petición a la api privada con JS recogiendo 
+        toda la información sobre una galería de videos que contiene información de cada evento.`,
         imgSrc: './img/2023-03-03 16-28-50.gif'
     },
     {
-        title: 'Proyecto 3',
-        description: 'Descripción breve del proyecto 3.',
-        allDesc: 'Plantilla de diseño',
-        imgSrc: './img/2023-03-03 16-25-31.gif'
+        title: 'Galeria de Fotos',
+        description: 'Trabajo para Daniel',
+        allDesc: `Esta galería de fotos esta diseñada para un fotógrafo llamado Daniel, en donde me pidió que 
+        quería que le hiciera una pagina donde pueda publicar cada fotografía y de esta manera promocionarse y atraer a mas clientela.    `,
+        imgSrc: './img/2023-03-03 16-39-35.gif'
     },
     {
-        title: 'Proyecto 4',
-        description: 'Descripción breve del proyecto 4.',
-        allDesc: 'Plantilla de diseño',
-        imgSrc: './img/2023-03-03 16-39-35.gif'
+        title: 'Ouden',
+        description: 'Proyecto Escolar',
+        allDesc: `Este es el proyecto que tuve que hacer al final de mis estudios. Consistía en crear una página web en la que los clientes pudieran comprar mapas 
+        para la construcción de sus casas, con un buscador que permitiera aplicar filtros para satisfacer sus gustos.`,
+        imgSrc: './img/2023-03-03 16-25-31.gif '
     }
 ];
 

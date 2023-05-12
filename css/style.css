@@ -497,6 +497,14 @@ footer {
     font-size: 18px;
 }
 
+#contact {
+    background-color: #00000000;
+}
+
+.cvBea {
+    color: #af4c99;
+}
+
 .contact-links {
     list-style: none;
     margin: 0;
@@ -548,6 +556,9 @@ footer {
     justify-content: center;
     align-items: center;
     height: 100%;
+    margin-top: 50px;
+    gap: 50px;
+    flex-wrap: wrap;
 }
 
 .blobs,
@@ -569,22 +580,38 @@ footer {
     clip-path: circle(42px at center);
 }
 
+.circles {
+    background-color: #c0c0c0;
+    padding-top: 17px;
+}
+
+.circles span {
+    font-size: 14px;
+}
+
 .first,
 .first2 {
-    transition: transform 0.5s 100ms ease-out;
-    background: hsl(307, 70%, 58%);
+    transition: transform 0.5s 300ms ease-out;
 }
 
 .second,
 .second2 {
-    transition: transform 0.5s 300ms ease-out;
-    background: hsl(277, 70%, 58%);
+    transition: transform 0.5s 500ms ease-out;
 }
 
 .last,
 .last2 {
-    transition: transform 0.5s 500ms ease-out;
-    background: hsl(247, 70%, 58%);
+    transition: transform 0.5s 700ms ease-out;
+}
+
+.quatro,
+.quatro2 {
+    transition: transform 0.5s 900ms ease-out;
+}
+
+.cinco,
+.cinco2 {
+    transition: transform 0.5s 100ms ease-out;
 }
 
 .first.show,
@@ -600,6 +627,16 @@ footer {
 .last.show,
 .last2.show2 {
     transform: translate(100px, -120px);
+}
+
+.quatro.show,
+.quatro2.show2 {
+    transform: translate(110px, -20px);
+}
+
+.cinco.show,
+.cinco2.show2 {
+    transform: translate(-110px, -20px);
 }
 
 .bg.show {
@@ -625,7 +662,7 @@ footer {
 
 .main-icons {
     fill: rgb(255, 255, 255);
-    width: 50px;
+    width: 40px;
     height: 50px;
 }
 
@@ -813,5 +850,14 @@ svg {
     #project-modal-next {
         font-size: 24px;
         margin: 0 5px;
+    }
+    .container2 {
+        flex-direction: column;
+        width: 100%;
+        gap: 140px;
+    }
+    #habilidades {
+        position: relative;
+        height: 600px;
     }
 }
