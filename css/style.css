@@ -374,7 +374,7 @@ input[type="submit"]:hover {
     height: 220px;
     border: 5px solid rgba(0 0 0 /12%);
     object-fit: cover;
-    object-position: center;
+    object-position: bottom;
     max-width: 100%;
 }
 
